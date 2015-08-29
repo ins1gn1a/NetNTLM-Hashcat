@@ -3,6 +3,10 @@
 import sys
 import re
 import argparse
+import time
+
+# Set time Var
+dateTime = time.strftime("%d-%m-%Y %H:%M")
 
 # Arg Input (Like a pirate)
 p = argparse.ArgumentParser(description='Convert NetNTLM John Hashes to Hashcat Format')
@@ -37,8 +41,8 @@ elif a.file:
                                 if a.output is None:
                                         print outhash
                                 else:
-                                        with open(a.output,'w') as f:
-                                                f.write(outhash)
+                                        with open(a.output,'a') as f:
+                                                f.write(dateTime + " " + outhash + "\n")
                                         f.close()
 
         except KeyboardInterrupt:
