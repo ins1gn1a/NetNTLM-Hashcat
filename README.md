@@ -1,4 +1,6 @@
 # NTLM v1 & v2 > Hashcat
+![](https://img.shields.io/maintenance/yes/2017.svg)
+
 Converts Cain or John NTLMv1 and NTLMv2 hashes (singular, or in bulk) to HashCat compatible format.
 
 ## NTLMv1-Hashcat Arguments
